@@ -8,25 +8,25 @@
 		function addEntry()
 		{
 			var data = document.getElementById("userInput").value;
-			console.log(data);
+			document.write(data);
 			myList.push(data);
 			var x = myList.length;
-			console.log(x);
+			document.write(x);
 			for (i=0 ; i<x ; i++)
 			{
-				console.log(myList[i]);
+				document.write(myList[i]);
 			}
 		}
 		function delEntry()
 		{
 			var data = document.getElementById("userInput").value;
-			console.log(data);
+			document.write(data);
 			myList.splice( myList.indexOf(data), 1 );
 			var x = myList.length;
-			console.log(x);
+			document.write(x);
 			for (i=0 ; i<x ; i++)
 			{
-				console.log(myList[i]);
+				document.write(myList[i]);
 			}
 		}
 
