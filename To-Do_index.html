@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To-Do List</title>
+	<script type="text/javascript">
+		var myList = [];
+		var i;
+		function addEntry()
+		{
+			var data = document.getElementById("userInput").value;
+			console.log(data);
+			myList.push(data);
+			var x = myList.length;
+			console.log(x);
+			for (i=0 ; i<x ; i++)
+			{
+				console.log(myList[i]);
+			}
+		}
+		function delEntry()
+		{
+			var data = document.getElementById("userInput").value;
+			console.log(data);
+			myList.splice( myList.indexOf(data), 1 );
+			var x = myList.length;
+			console.log(x);
+			for (i=0 ; i<x ; i++)
+			{
+				console.log(myList[i]);
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<form>
+		<h2> To-Do List <h2/>
+		<input type="text" id="userInput" placeholder="Tap to Edit dialogue box">
+		<br>
+		<input type="button" name="choice" value="Add Task" onclick="addEntry()">
+		<input type="button" name="choice" value="Remove Task" onclick="delEntry()">
+		<p>Tasks:</p>
+		<br>
+		<p><b id="demo"></b></p>
+	</form>
+</body>
+</html>
